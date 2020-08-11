@@ -120,27 +120,6 @@ end
 
 
 
-
-
-
-
-function corners = hexagon(center, radius)
-
-radius = radius / cosd(30);
-angles = [30 90 150 210 270 330];
-
-x = cosd(angles)*radius + center(1);
-y = sind(angles)*radius + center(2);
-corners = [x;y];
-
-end
-
-
-
-
-
-
-
 function [odd_row, even_row] = neighbor_array(A, beta)
 
 top_left = [beta*ones(1,size(A,2)+1) ; [beta*ones(size(A,1),1) A]];
